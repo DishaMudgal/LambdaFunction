@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(2, 23, 3, 23, 13331, 21, 13);
+
+        // Filter numbers that start with 2
+        List<Integer> filteredNumbers = numbers.stream()
+            .filter(number -> number.toString().startsWith("2"))
+            .toList();
+
+        // Print filtered numbers
+        filteredNumbers.forEach(number -> System.out.println("Filtered number: " + number));
+    }
+}
